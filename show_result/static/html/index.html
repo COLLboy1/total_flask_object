@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>成果系统登陆界面</title>
+    <link href="/static/css/bootstrap-4.6.0-dist/css/bootstrap.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/static/js/bootstrap-4.6.0-dist/popper.min.js"></script>
+    <script src="/static/js/bootstrap-4.6.0-dist/js/bootstrap.js"></script>
+</head>
+<body style="background-image: url('/static/image/bg.jpg'); background-repeat:no-repeat;background-size:100% 100%; background-attachment: fixed;">
+<!--  导航条  -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-bottom: 50px">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a class="navbar-brand" href="">
+            <img src="/static/image/logo.png" width="72" height="30" class="d-inline-block align-top" alt="">
+            功能管理系统 |
+        </a>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link">我的应用 </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/resume.html">关于我</a>
+            </li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+            <div class="btn-group" id="username">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                        aria-expanded="false" id="name">
+                    受伤的小野猫
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <button class="dropdown-item" type="button" onclick="logout()">退出</button>
+                </div>
+            </div>
+            <div class="btn-group" id="login">
+                <button type="button" class="btn btn-secondary"><a href="login.html" style="color: white">登陆</a></button>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="m-auto">
+    <!--  功能模块  -->
+    <div class="container align-self-center">
+        <div class="row row-cols-3 m-auto">
+            <div class="m-auto">
+                <div class="card m-auto" style="width: 248px; height: 248px; background-image: url('/static/image/blog.png');">
+                    <div class="m-auto">
+                        <a href="javascript:;" onclick="my_blog()" class="text-center"  style="font-size: 30px; color: white">个人博客平台</a>
+                    </div>
+                </div>
+            </div>
+            <div class="m-auto">
+                <div class="card m-auto" style="width: 248px; height: 248px; background-image: url('/static/image/lianjia.png');">
+                    <div class="m-auto">
+                        <a href="/lianjia/index.html" class="text-center"  style="font-size: 30px; color: black">链家数据平台</a>
+                    </div>
+                </div>
+            </div>
+            <div class="m-auto">
+                <div class="card m-auto" style="width: 248px; height: 248px; background-image: url('/static/image/1.png');">
+                    <div class="m-auto">
+                        <p class="text-center">链家爬虫</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 10px"></div>
+        <div class="row row-cols-3 m-auto">
+            <div class="m-auto">
+                <div class="card m-auto" style="width: 248px; height: 248px; background-image: url('/static/image/1.png');">
+                    <div class="m-auto">
+                        <p class="text-center">链家爬虫</p>
+                    </div>
+                </div>
+            </div>
+            <div class="m-auto">
+                <div class="card m-auto" style="width: 248px; height: 248px; background-image: url('/static/image/1.png');">
+                    <div class="m-auto">
+                        <p class="text-center">链家爬虫</p>
+                    </div>
+                </div>
+            </div>
+            <div class="m-auto">
+                <div class="card m-auto" style="width: 248px; height: 248px; background-image: url('/static/image/1.png');">
+                    <div class="m-auto">
+                        <p class="text-center">链家爬虫</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="/static/js/index.js"></script>
+</html>

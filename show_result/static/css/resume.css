@@ -1,0 +1,60 @@
+/*字体设置*/
+.ziti{
+    font-size: 22px;
+    font-family: "微软雅黑";
+}
+
+.self-title{
+    background-color: #d9d9d9;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 80px;
+}
+
+.self-title div{
+    height: 80px;
+}
+
+.self-title div p{
+    font-size: 55px;
+    font-weight: 500;
+}
+
+.base_data div p{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.base_data div p span{
+    font-weight: normal;
+}
+
+.self-image{
+    height: 200px;
+    width: 160px;
+    background-image: url("/static/image/name.jpg");
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+}
+
+.educational-background{
+    background-color: #d9d9d9;
+    padding: 0;
+}
+
+.educational-background span{
+    background-color: #000000;
+    color: #ffffff;
+    font-family: "微软雅黑";
+    font-size: 28px;
+    margin: 0;
+    height: 40px;
+}
+
+.educational-background span p{
+    margin: 0 5px;
+}
+
+
+
+

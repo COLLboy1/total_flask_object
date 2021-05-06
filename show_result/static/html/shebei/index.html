@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>链家数据页面</title>
+    <link href="/static/css/bootstrap-4.6.0-dist/css/bootstrap.css" rel="stylesheet">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/static/js/bootstrap-4.6.0-dist/popper.min.js"></script>
+    <script src="/static/js/bootstrap-4.6.0-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+</head>
+<body style="background: #f8f9fa">
+<!-- 警示条 -->
+<div class="alert alert-warning alert-dismissible" role="alert"
+     style="margin-bottom: 0;background-color: #1b1e21;color: white">
+    <strong>警告：</strong> 本网址仅仅用于个人展览，如有侵权，请直接联系本人删除，谢谢！
+</div>
+
+<!-- 功能页面 -->
+<div class="container-fluid">
+    <div class="row">
+        <!--功能栏-->
+        <div class="col-2 left-tools" style="background-color: #24252c; width: 200px">
+            <div class="container-fluid" style="color: white">
+                <div class="row" style="width: 200px; height: 70px; margin-bottom: 20px">
+                    <div class="col-12 m-auto" style="border-bottom: 1px solid #333;"><p class="m-auto"
+                                                                                         style="font-size: 20px; font-weight: 600; text-align: center">
+                        河南招标信息数据数据
+                        <p></div>
+                </div>
+                <div class="row" style="font-size: 16px; height: 40px; width: 200px; margin-left: 10px">
+                    <div class="col-12" onclick="show_data()"><i class="bi bi-receipt-cutoff"></i>&ensp;数据展示</div>
+                </div>
+                <div class="row" style="font-size: 16px; height: 40px; width: 200px; margin-left: 10px">
+
+                </div>
+                <div class="row lianjia_data_explain"
+                     style="font-size: 14px; height: 40px; width: 200px; margin-left: 10px; margin-top: 100px">
+                    <div class="col-12" style="height: 40px; ">
+                        <i class="bi bi-info-circle"></i>
+                        <!--                        详细信息模态框-->
+                        <!-- Button trigger modal -->
+                        <span data-toggle="modal" data-target="#staticBackdrop">
+                            关于招标信息数据说明
+                        </span>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false"
+                             tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"
+                             style="color: #000000">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">关于数据说明</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>本数据是利用爬虫技术获取的数据，本数据仅用于数据展示以及数据分析，并未用于商用，如有侵权，请告知下架。</p>
+                                        <p>手机号码：18749843541</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--     页面展示栏   -->
+
+        <div class="col-10 show-data" style="margin-top: 10px">
+            <div class="container-fluid right-tools" style="background-color: #ffffff">
+                <!--                数据展示-->
+                <!--                功能性按钮-->
+                <div class="row" style="border-bottom: 1px solid #333;">
+                    <div class="col-12" style="margin-bottom: 5px">
+                        <div type="button" class="btn btn-primary m-auto"
+                             style="width: 120px; height: 35px; float: right">
+                            <span class="pull-left">导出数据</span>
+                            <i class="bi bi-save"></i>
+                        </div>
+                    </div>
+                </div>
+                <!--                查询列表功能-->
+                <div class="row" style="background-color: #e6f7ff; border: 1px solid #91d5ff; margin-top: 10px;">
+                    <div class="col-3">
+                        <div class="col-auto my-1">
+                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                <option selected>选择城市</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="col-auto my-1">
+                            <select class="custom-select mr-sm-2" id="2">
+                                <option selected>选择年份</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="col-auto my-1">
+                            <select class="custom-select mr-sm-2" id="3">
+                                <option selected>选择月份</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-3" style="margin: 5px 0;">
+                        <button type="button" class="btn m-auto" style="background-color: #91d5ff;">查询</button>
+                    </div>
+                </div>
+
+                <!-- 数据展示页面 -->
+                <div class="row overflow-auto show-data-tabel"
+                     style="border-bottom: 1px solid #333;margin-bottom: 10px;height: 200px">
+                    <div class="col-12">
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <nav aria-label="Page navigation example" style="float: right">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<link href="/static/css/lianjia.css">
+<script src="/static/js/lianjia.js"></script>
+</html>
